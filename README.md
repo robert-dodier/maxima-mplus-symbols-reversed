@@ -13,7 +13,7 @@ which is `false` (disabled) by default. Reordering is enabled when
 `reverse_symbols_order` is `true`.
 
 Example:
-
+```
 (%i1) load ("form-mplus-symbols-reversed.lisp") $
 (%i2) reverse_symbols_order;
 (%o2)                                false
@@ -24,7 +24,7 @@ Example:
 (%i5) e;
                           5      3      2          3
 (%o5)              a + 5 b  + 3 b  + 2 b  + b + 3 c  + z + 1    
-
+```
 This code works by replacing the function which is called to rework
 every "+" expression for display. The main function for that purpose
 is named NFORMAT and the specific one for "+" expressions is named
