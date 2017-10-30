@@ -40,3 +40,8 @@ a cursory review seems to show that these are all due to a fixed
 dependence on a specific order of terms, and therefore it is possible
 all these errors could be avoided by updating the expected result in
 each test. A case by case review would be needed to establish that.
+
+It's entirely possible that this code orders some terms in a way
+that seems suboptimal. If you think that the ordering should be
+adjusted, I'm interested to hear about it; please submit a ticket
+via the "Issues" button on the Github project page.
