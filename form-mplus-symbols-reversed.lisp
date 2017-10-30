@@ -1,6 +1,4 @@
 ;; form-mplus-symbols-reversed.lisp -- reverse order of terms in "+" expressions
-;; copyright 2017 by Robert Dodier
-;; I release this work under terms of the GNU General Public License.
 ;; Usage:
 ;; load ("form-mplus-symbols-reversed.lisp") $
 ;; reverse_symbols_order : true $
@@ -8,6 +6,10 @@
 ;; => a+b^3+b^2+b+z
 ;; tex (a + b + z + b^2 + b^3);
 ;; => $$a+b^3+b^2+b+z$$
+
+;; First part of this file is adapted from similarly-named functions in Maxima src/simp.lisp
+;; which is released under terms of the GNU General Public License.
+;; As a derivative work, this is therefore released under the same license.
 
 (defun great-symbols-reversed (x y)
   (cond ((atom x)
@@ -124,6 +126,9 @@
      (cond ((not (alike1 c d)) (return (great-symbols-reversed c d))))
      (setq l1 (1- l1) l2 (1- l2))
      (go loop)))
+
+;; Remainder of this file, copyright 2017 by Robert Dodier.
+;; I release this work under terms of the GNU General Public License.
 
 (defmvar $reverse_symbols_order nil)
 
